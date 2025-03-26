@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fm_rooms",
+  "info": {
+    "singularName": "fm-room",
+    "pluralName": "fm-rooms",
+    "displayName": "FMRooms",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "picture_url": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "image_url": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "find_more_room": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::find-more-room.find-more-room",
+      "inversedBy": "fm_rooms"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "find_more_rooms",
+  "info": {
+    "singularName": "find-more-room",
+    "pluralName": "find-more-rooms",
+    "displayName": "FindMoreRooms",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "findmoreroomsid": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "fm_rooms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fm-room.fm-room",
+      "mappedBy": "find_more_room"
+    }
+  }
+}
